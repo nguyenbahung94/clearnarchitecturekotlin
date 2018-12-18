@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Movies Kotlin</string>
+
+    <string name="action_refresh">Refresh</string>
+
+    <string name="failure_network_connection">No Network Connection.</string>
+    <string name="failure_server_error">Server Error</string>
+    <string name="failure_movies_list_unavailable">Movies Unavailable.</string>
+    <string name="failure_movie_non_existent">Movie Not Existent.</string>
+    <string name="login_screen_title">Login</string>
+
+    <string name="movies_screen_title">Movies</string>
+    <string name="movie_details_screen_title">Movie Details</string>
+    <string name="movie_details_summary">Summary</string>
+    <string name="movie_details_cast">Cast</string>
+    <string name="movie_details_director">Director</string>
+    <string name="movie_details_year">Year</string>
+
+    <!-- Animations -->
+    <string name="movie_transition_poster">moviePosterTransition</string>
+</resources>
