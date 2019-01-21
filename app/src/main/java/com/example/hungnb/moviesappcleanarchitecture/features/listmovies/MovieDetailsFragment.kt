@@ -1,13 +1,14 @@
 package com.example.hungnb.moviesappcleanarchitecture.features.listmovies
 
 import android.os.Bundle
-import android.system.Os.close
 import android.view.View
 import com.example.hungnb.moviesappcleanarchitecture.R
 import com.example.hungnb.moviesappcleanarchitecture.core.exception.Failure
-import com.example.hungnb.moviesappcleanarchitecture.core.extension.viewModel
+import com.example.hungnb.moviesappcleanarchitecture.core.extension.*
 import com.example.hungnb.moviesappcleanarchitecture.core.platform.BaseFragment
 import com.example.hungnb.moviesappcleanarchitecture.features.listmovies.MovieFailure.NonExistentMovie
+import kotlinx.android.synthetic.main.fragment_movie_details.*
+import kotlinx.android.synthetic.main.toolbar.*
 import javax.inject.Inject
 
 class MovieDetailsFragment : BaseFragment() {
@@ -33,7 +34,7 @@ class MovieDetailsFragment : BaseFragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        appComponent.inject(this)
+        //appComponent.inject(this)
         activity?.let { movieDetailsAnimator.postponeEnterTransition(it) }
 
         movieDetailsViewModel = viewModel(viewModelFactory) {
@@ -81,8 +82,8 @@ class MovieDetailsFragment : BaseFragment() {
 
     private fun handleFailure(failure: Failure?) {
         when (failure) {
-            is NetworkConnection -> { notify(R.string.failure_network_connection); close() }
-            is ServerError -> { notify(R.string.failure_server_error); close() }
+            is Failure.NetworkConnection -> { notify(R.string.failure_network_connection); close() }
+            is Failure.ServerError -> { notify(R.string.failure_server_error); close() }
             is NonExistentMovie -> { notify(R.string.failure_movie_non_existent); close() }
         }
     }

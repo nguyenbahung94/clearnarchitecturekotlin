@@ -12,7 +12,7 @@ class MovieDetailsViewModel
     var movieDetails: MutableLiveData<MovieDetailsView> = MutableLiveData()
 
     fun loadMovieDetails(movieId: Int) =
-            getMovieDetails(Params(movieId)) { it.either(::handleFailure, ::handleMovieDetails) }
+            getMovieDetails(GetMovieDetails.Params(movieId)) { it.either(::handleFailure, ::handleMovieDetails) }
 
     fun playMovie(url: String) = playMovie(PlayMovie.Params(url))
 

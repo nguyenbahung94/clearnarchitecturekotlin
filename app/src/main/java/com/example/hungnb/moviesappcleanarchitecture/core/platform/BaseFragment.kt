@@ -9,8 +9,12 @@ import android.support.v4.content.ContextCompat
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.hungnb.moviesappcleanarchitecture.AndroidApplication
+import com.example.hungnb.moviesappcleanarchitecture.R.color
 import com.example.hungnb.moviesappcleanarchitecture.core.di.components.ApplicationComponent
-import com.example.hungnb.moviesappcleanarchitecture.core.platform.BaseActivity
+import com.example.hungnb.moviesappcleanarchitecture.core.extension.appContext
+import com.example.hungnb.moviesappcleanarchitecture.core.extension.viewContainer
+import kotlinx.android.synthetic.main.toolbar.*
 import javax.inject.Inject
 
 /**
@@ -21,12 +25,11 @@ import javax.inject.Inject
 abstract class BaseFragment : Fragment() {
 
     abstract fun layoutId(): Int
-
     val appComponent: ApplicationComponent by lazy(mode = LazyThreadSafetyMode.NONE) {
         (activity?.application as AndroidApplication).appComponent
     }
-
-    @Inject lateinit var viewModelFactory: ViewModelProvider.Factory
+    @Inject
+    lateinit var viewModelFactory: ViewModelProvider.Factory
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View =
             inflater.inflate(layoutId(), container, false)

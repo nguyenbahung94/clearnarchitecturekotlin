@@ -6,10 +6,15 @@ import android.support.v7.widget.StaggeredGridLayoutManager
 import android.view.View
 import com.example.hungnb.moviesappcleanarchitecture.R
 import com.example.hungnb.moviesappcleanarchitecture.core.exception.Failure
+import com.example.hungnb.moviesappcleanarchitecture.core.extension.invisible
+import com.example.hungnb.moviesappcleanarchitecture.core.extension.observe
 import com.example.hungnb.moviesappcleanarchitecture.core.extension.viewModel
+import com.example.hungnb.moviesappcleanarchitecture.core.extension.failure
+import com.example.hungnb.moviesappcleanarchitecture.core.extension.visible
 import com.example.hungnb.moviesappcleanarchitecture.core.navigation.Navigator
 import com.example.hungnb.moviesappcleanarchitecture.core.platform.BaseFragment
 import com.example.hungnb.moviesappcleanarchitecture.features.listmovies.MovieFailure.ListNotAvailable
+import kotlinx.android.synthetic.main.fragment_movies.*
 import javax.inject.Inject
 
 class MoviesFragment : BaseFragment() {
@@ -24,7 +29,6 @@ class MoviesFragment : BaseFragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         appComponent.inject(this)
-
         moviesViewModel = viewModel(viewModelFactory) {
             observe(movies, ::renderMoviesList)
             failure(failure, ::handleFailure)
@@ -59,8 +63,8 @@ class MoviesFragment : BaseFragment() {
 
     private fun handleFailure(failure: Failure?) {
         when (failure) {
-            is NetworkConnection -> renderFailure(R.string.failure_network_connection)
-            is ServerError -> renderFailure(R.string.failure_server_error)
+            is Failure.NetworkConnection -> renderFailure(R.string.failure_network_connection)
+            is Failure.ServerError -> renderFailure(R.string.failure_server_error)
             is ListNotAvailable -> renderFailure(R.string.failure_movies_list_unavailable)
         }
     }

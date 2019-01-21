@@ -1,6 +1,9 @@
 package com.example.hungnb.moviesappcleanarchitecture.core.di.model
 
 import android.content.Context
+import com.example.hungnb.moviesappcleanarchitecture.AndroidApplication
+import com.example.hungnb.moviesappcleanarchitecture.BuildConfig
+import com.example.hungnb.moviesappcleanarchitecture.features.listmovies.MoviesRepository
 import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient

@@ -5,7 +5,9 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.hungnb.moviesappcleanarchitecture.R
 import com.example.hungnb.moviesappcleanarchitecture.core.extension.inflate
+import com.example.hungnb.moviesappcleanarchitecture.core.extension.loadFromUrl
 import com.example.hungnb.moviesappcleanarchitecture.core.navigation.Navigator
+import kotlinx.android.synthetic.main.row_movie.view.*
 import javax.inject.Inject
 import kotlin.properties.Delegates
 

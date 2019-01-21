@@ -3,9 +3,9 @@ package com.example.hungnb.moviesappcleanarchitecture.core.di.components
 import com.example.hungnb.moviesappcleanarchitecture.AndroidApplication
 import com.example.hungnb.moviesappcleanarchitecture.core.di.model.ApplicationModule
 import com.example.hungnb.moviesappcleanarchitecture.core.di.model.ViewModelModule
+import com.example.hungnb.moviesappcleanarchitecture.core.navigation.RouteActivity
 import com.example.hungnb.moviesappcleanarchitecture.features.listmovies.MovieDetailsFragment
 import com.example.hungnb.moviesappcleanarchitecture.features.listmovies.MoviesFragment
-import com.fernandocejas.sample.core.navigation.RouteActivity
 import dagger.Component
 import javax.inject.Singleton
 
