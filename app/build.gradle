@@ -33,6 +33,7 @@ dependencies {
     def unitTestDependencies = rootProject.ext.unitTesting
     def acceptanceTestDependencies = rootProject.ext.acceptanceTesting
     def developmentDependencies = rootProject.ext.development
+    def rxjavaDependencies =rootProject.ext.rxjava
 
     //Compile time dependencies
     kapt applicationDependencies.archComponentsCompiler
@@ -54,6 +55,7 @@ dependencies {
     implementation applicationDependencies.glide
     implementation applicationDependencies.dagger
     implementation applicationDependencies.retrofit
+    implementation applicationDependencies.retrofit_2
     implementation applicationDependencies.okhttpLoggingInterceptor
 
 
@@ -77,6 +79,11 @@ dependencies {
     debugImplementation developmentDependencies.leakCanary
     releaseImplementation developmentDependencies.leakCanaryNoop
     testImplementation developmentDependencies.leakCanaryNoop
+
+    //rxjava
+    implementation rxjavaDependencies.adapter_rxjava
+    implementation rxjavaDependencies.rxjava
+    implementation rxjavaDependencies.rxandroid
 
 
 }

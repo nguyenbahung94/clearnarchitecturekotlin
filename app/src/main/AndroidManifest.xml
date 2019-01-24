@@ -17,7 +17,7 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity
-            android:name=".core.navigation.RouteActivity"
+            android:name=".common.navigation.RouteActivity"
             android:noHistory="true"
             android:theme="@style/AppTheme.Translucent">
             <intent-filter>
@@ -27,15 +27,15 @@
         </activity>
 
         <activity
-            android:name=".features.login.LoginActivity"
+            android:name="com.example.hungnb.moviesappcleanarchitecture.presentation.login.LoginActivity"
             android:label="@string/login_screen_title" />
 
         <activity
-            android:name=".features.listmovies.MoviesActivity"
+            android:name="com.example.hungnb.moviesappcleanarchitecture.presentation.listmovies.MoviesActivity"
             android:label="@string/movies_screen_title" />
 
         <activity
-            android:name=".features.listmovies.MovieDetailsActivity"
+            android:name="com.example.hungnb.moviesappcleanarchitecture.presentation.moviesdetaills.MovieDetailsActivity"
             android:label="@string/movie_details_screen_title"
             android:theme="@style/AppTheme.Translucent" />
 
