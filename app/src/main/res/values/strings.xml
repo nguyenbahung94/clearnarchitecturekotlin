@@ -6,4 +6,13 @@
     <string name="failure_server_error">Server Error</string>
     <string name="failure_movies_list_unavailable">Movies Unavailable.</string>
     <string name="failure_movie_non_existent">Movie Not Existent.</string>
+    <string name="movies">Movies</string>
+    <string name="welcome_back">Welcome Back</string>
+    <string name="read_it_together">enjoy your film</string>
+    <string name="skip">Skip</string>
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="sign_up">Sign up</string>
+    <string name="forget_password">Forget Password ?</string>
 </resources>

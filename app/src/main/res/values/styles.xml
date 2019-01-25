@@ -2,6 +2,7 @@
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimary</item>
         <item name="colorAccent">@color/colorAccent</item>
@@ -61,4 +62,7 @@
         <item name="android:freezesText">true</item>
     </style>
 
+    <style name="ProgressBarStyle">
+        <item name="colorAccent">@color/colorProgressBar</item>
+    </style>
 </resources>

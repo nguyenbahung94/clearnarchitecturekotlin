@@ -7,4 +7,9 @@
     <color name="colorTextSecondary">#7f1a18</color>
 
     <color name="translucentBackground">#ED000000</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorBackground">#333C46</color>
+    <color name="colorSplashText">#F0F0F0</color>
+    <color name="colorProgressBar">#FFCE511C</color>
+    <color name="colorTextView">#83898E</color>
 </resources>

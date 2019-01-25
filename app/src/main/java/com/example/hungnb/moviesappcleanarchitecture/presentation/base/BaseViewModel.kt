@@ -12,8 +12,17 @@ import com.example.hungnb.moviesappcleanarchitecture.common.exception.Failure
 abstract class BaseViewModel : ViewModel() {
 
     var failure: MutableLiveData<Failure> = MutableLiveData()
+    var isDialogShowing: MutableLiveData<DialogIsShowing> = MutableLiveData();
 
     protected fun handleFailure(failure: Failure) {
         this.failure.value = failure
+    }
+
+    protected fun setvalueDialog(dialogIsShowing: DialogIsShowing) {
+        isDialogShowing.value = dialogIsShowing
+    }
+
+    protected fun getValueDialog(): DialogIsShowing? {
+        return isDialogShowing.value
     }
 }
