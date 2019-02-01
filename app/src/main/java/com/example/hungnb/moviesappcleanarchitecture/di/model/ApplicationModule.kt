@@ -1,7 +1,7 @@
 package com.example.hungnb.moviesappcleanarchitecture.di.model
 
+import android.app.Application
 import android.content.Context
-import com.example.hungnb.moviesappcleanarchitecture.AndroidApplication
 import com.example.hungnb.moviesappcleanarchitecture.BuildConfig
 import com.example.hungnb.moviesappcleanarchitecture.datalayer.repository.MoviesDataRepository
 import com.example.hungnb.moviesappcleanarchitecture.domain.Repository.MoviesRepository
@@ -15,7 +15,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
 
 @Module
-class ApplicationModule(private val application: AndroidApplication) {
+class ApplicationModule(private val application: Application) {
 
     @Provides
     @Singleton

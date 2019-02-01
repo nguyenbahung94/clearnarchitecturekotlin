@@ -1,4 +1,3 @@
-
 package com.example.hungnb.moviesappcleanarchitecture.common.navigation
 
 import android.os.Bundle
@@ -10,10 +9,11 @@ import javax.inject.Inject
 class RouteActivity : AppCompatActivity() {
 
     private val appComponent: ApplicationComponent by lazy(mode = LazyThreadSafetyMode.NONE) {
-        (application as AndroidApplication).appComponent
+        AndroidApplication().appComponent
     }
 
-    @Inject internal lateinit var navigator: Navigator
+    @Inject
+    internal lateinit var navigator: Navigator
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

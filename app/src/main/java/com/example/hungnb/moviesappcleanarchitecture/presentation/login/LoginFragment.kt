@@ -7,7 +7,6 @@ import android.support.v4.content.ContextCompat
 import android.view.View
 import android.view.View.VISIBLE
 import com.example.hungnb.moviesappcleanarchitecture.R
-import com.example.hungnb.moviesappcleanarchitecture.common.extension.viewModel
 import com.example.hungnb.moviesappcleanarchitecture.presentation.base.BaseFragment
 import kotlinx.android.synthetic.main.fragment_login.*
 
@@ -16,9 +15,6 @@ class LoginFragment : BaseFragment() {
     private lateinit var loginViewModel: LoginViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        loginViewModel=viewModel(viewModelFactory){
-        }
-
     }
 
 

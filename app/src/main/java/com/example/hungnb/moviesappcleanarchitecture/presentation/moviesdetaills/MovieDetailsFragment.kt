@@ -76,7 +76,8 @@ class MovieDetailsFragment : BaseFragment() {
                 movieCast.text = cast
                 movieDirector.text = director
                 movieYear.text = year.toString()
-                moviePlay.setOnClickListener { movieDetailsViewModel.playMovie(trailer) }
+                moviePlay.setOnClickListener {
+                    movieDetailsViewModel.playMovie(trailer) }
             }
         }
         movieDetailsAnimator.fadeVisible(scrollView, movieDetails)

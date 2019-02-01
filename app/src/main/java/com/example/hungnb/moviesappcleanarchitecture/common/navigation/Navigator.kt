@@ -26,6 +26,7 @@ class Navigator @Inject constructor(private val authenticator: Authenticator,pri
 
     fun showMain(context: Context) {
         Log.e("message===",message.getString())
+        Log.e("message===",message.getString())
         when (authenticator.userLoggedIn()) {
             true -> showMovies(context)
             false -> showLogin(context)

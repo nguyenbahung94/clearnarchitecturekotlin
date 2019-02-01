@@ -21,8 +21,9 @@ class AndroidApplication : Application() {
         this.initializeLeakDetection()
     }
 
+
     private fun injectMembers() {
-            appComponent.inject(this)
+        appComponent.inject(this)
     }
 
     private fun initializeLeakDetection() {
