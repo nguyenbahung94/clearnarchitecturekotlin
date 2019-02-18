@@ -27,7 +27,8 @@
 
         <activity
             android:name=".presentation.login.LoginActivity"
-            android:label="@string/login_screen_title" />
+            android:label="@string/login_screen_title"
+            android:windowSoftInputMode="adjustPan" />
 
         <activity
             android:name=".presentation.listmovies.MoviesActivity"
